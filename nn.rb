@@ -21,7 +21,7 @@ training_x_data = x_data[test_set_size .. x_data.size]
 training_y_data = y_data[test_set_size .. y_data.size]
 
 # Setup training data model
-train = RubyFann::TrainData.new( :inputs=> x_data, :desired_outputs=>y_data );
+train = RubyFann::TrainData.new( :inputs=> training_x_data, :desired_outputs=>training_y_data );
 
 # Setup model and train using training data
 model = RubyFann::Standard.new(
